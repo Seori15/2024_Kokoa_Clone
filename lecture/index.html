@@ -30,9 +30,14 @@
       </p>
     </header>
 
-    <form id="login-form">
-      <input type="text" placeholder="Email or phone numbjer" />
-      <input type="password" placeholder="Password" />
+    <form action="friends.html" method="get" id="login-form">
+      <input
+        name="username"
+        type="text"
+        placeholder="Email or phone number"
+        required
+      />
+      <input name="password" type="password" placeholder="Password" required />
       <input type="submit" value="Log In" />
       <input
         type="submit"
@@ -40,6 +45,7 @@
       /><!-- <button></button>으로 작성해도 됨 -->
       <a href="#">Find Kokoa Account or Password</a>
     </form>
+
 
     <script
       src="https://kit.fontawesome.com/{사용자kit코드}.js"
