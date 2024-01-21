@@ -1,0 +1,220 @@
+#chat-screen {
+  height: 300vh;
+}
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+}
+#chat-screen .status-bar {
+  z-index: 2;
+}
+#chat-screen .alt-header {
+  top: 10px;
+  z-index: 1;
+}
+
+.main-chat {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: none;
+  }
+}
+.chat__timestamp {
+  color: white;
+  background-color:  #92a4b2;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  animation: fadeIn 0.7s linear;
+}
+@keyframes fadeInRow {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: none;
+  }
+}
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  animation: fadeInRow 0.7s linear;
+}
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 35%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+.message__author {
+  margin-bottom: 5px;
+  display: block;
+}
+.message__content {
+  display: flex;
+  align-items: flex-end;
+}
+.message__text {
+  background-color: white;
+  padding: 8px 13px;
+  font-size: 18px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+.message__time,
+.message__author {
+  opacity: 0.8;
+  font-size: 14px;
+}
+@keyframes fadeInRowOwn {
+  from {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  to {
+      opacity: 1;
+      transform: none;
+  }
+}
+.message-row--own {
+  justify-content: flex-end;
+  animation: fadeInRowOwn 0.7s linear;
+}
+.message-row--own .message__text {
+  background-color: var(--yellow);
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+.message-row--own .message__content {
+  flex-direction: row-reverse;
+}
+.message-row--own .message__content > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 0.5em;
+  margin-left: 5px;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px 25px;
+  transition: all 0.3s ease-in-out;
+}
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+.reply i {
+  cursor: pointer;
+}
+.reply i:not(.reply__column button i) {
+  opacity: 0.5;
+}
+.reply input {
+  padding: 14px;
+  width: 100%;
+  border: var(--main-border);
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 6px;
+  top: 7px;
+}
+.reply__column:last-child > i {
+  right: 46px;
+  top: 21px;
+}
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+}
+.reply input:focus {
+  width: 98vw;
+  transform: translateX(-14%) translateY(-80px);
+}
+.reply:focus-within {
+  transform: translateY(80px);
+}
+.chat-background-ember {
+  position: relative;
+}
+.chat-background-ember::before {
+  background-image: url(../../image/ember-background.jfif);
+  content: "";
+  z-index: -1;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+.chat-background-mom {
+  position: relative;
+}
+.chat-background-mom::before {
+  background-image: url(../../image/mom-background.jfif);
+  content: "";
+  z-index: -1;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
