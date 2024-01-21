@@ -192,7 +192,7 @@
   position: relative;
 }
 .chat-background-ember::before {
-  background-image: url(../../image/ember-background.jfif);
+  background-image: url(../../image/ember-background.jpg);
   content: "";
   z-index: -1;
   background-size: cover;
@@ -207,7 +207,7 @@
   position: relative;
 }
 .chat-background-mom::before {
-  background-image: url(../../image/mom-background.jfif);
+  background-image: url(../../image/mom-background.jpg);
   content: "";
   z-index: -1;
   background-size: cover;

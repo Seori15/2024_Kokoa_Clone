@@ -31,7 +31,7 @@ body {
     height: 100vh;
 }
 .main-background::before {
-    background-image: url(../image/background.jfif);
+    background-image: url(../image/background.jpg);
     content: "";
     z-index: -1;
     background-size: cover;

@@ -29,10 +29,10 @@
   cursor: pointer;
 }
 .more-suggestions__icon-image-element-portal {
-background-image: url(../../image/Element\ City.jfif);
+background-image: url(../../image/Element\ City.jpg);
 background-size: cover;
 }
 .more-suggestions__icon-image-fireplace {
-background-image: url(../../image/fireplace.jfif);
+background-image: url(../../image/fireplace.jpg);
 background-size: cover;
 }

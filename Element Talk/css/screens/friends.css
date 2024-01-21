@@ -34,7 +34,7 @@
   }
 }
 #splash-screen {
-  background-image: url("../../image/splash.jfif");
+  background-image: url("../../image/splash.jpg");
   background-size: cover;
   position: absolute;
   height: 100vh;
